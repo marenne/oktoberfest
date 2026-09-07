@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oktoberfest & Baby Shower | The Lambots</title>
+  <meta name="description" content="Grab your Dirndls & Lederhosen! Join us for an Oktoberfest & Baby Shower on October 17 in Paso Robles, CA. Last Oktoberfest before D-Day!" />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Oktoberfest & Baby Shower | The Lambots" />
+  <meta property="og:description" content="Grab your Dirndls & Lederhosen! October 17, 3PM in Paso Robles, CA. Last Oktoberfest before D-Day! RSVP on Partiful." />
+  <meta property="og:image" content="assets/invite.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥨</text></svg>">
+
+  <!-- Google Fonts: Festive German Headline + Warm Rustic Serif for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bavarian: {
+              blue: '#0066b2',
+              sky: '#4ba3e3',
+              deep: '#004c85',
+              light: '#e8f4fc',
+            },
+            beer: {
+              amber: '#d97706',
+              gold: '#f59e0b',
+              warm: '#fbbf24',
+              light: '#fef3c7',
+              foam: '#fffbeb',
+            },
+            chalk: {
+              bg: '#14181f',
+              card: '#1b222d',
+              cardHover: '#232c3a',
+              border: 'rgba(245, 158, 11, 0.25)',
+              text: '#f3f4f6',
+              muted: '#cbd5e1',
+            }
+          },
+          fontFamily: {
+            // Warm, classic serif body text that fits a chalkboard / tavern aesthetic
+            sans: ['"Lora"', 'Georgia', 'serif'],
+            serif: ['"Lora"', 'Georgia', 'serif'],
+            // Cohesive German brewery / festival headline font
+            festive: ['"Germania One"', 'serif'],
+            // Blackletter for traditional German callouts
+            bavarian: ['"UnifrakturCook"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Traditional Bavarian Blue & White Rhombus (Raute) Flag Pattern */
+    .bavarian-banner {
+      background-color: #ffffff;
+      background-image: 
+        linear-gradient(45deg, #0066b2 25%, transparent 25%),
+        linear-gradient(-45deg, #0066b2 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #0066b2 75%),
+        linear-gradient(-45deg, transparent 75%, #0066b2 75%);
+      background-size: 44px 44px;
+      background-position: 0 0, 0 22px, 22px -22px, -22px 0px;
+    }
+
+    /* Ornate Chalkboard Framing */
+    .chalk-frame {
+      border: 2px solid rgba(229, 169, 60, 0.4);
+      box-shadow: 
+        inset 0 0 30px rgba(0, 0, 0, 0.6),
+        0 12px 30px -8px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Festive Glow */
+    @keyframes goldGlow {
+      0%, 100% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.35); }
+      50% { box-shadow: 0 0 28px rgba(245, 158, 11, 0.7); }
+    }
+    .glow-gold {
+      animation: goldGlow 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-chalk-bg text-chalk-text min-h-screen flex flex-col font-serif selection:bg-beer-amber selection:text-white">
+
+  <!-- Top Bavarian Diamond Flag Banner (Substantial & Bold) -->
+  <div class="w-full h-14 sm:h-20 bavarian-banner border-b-4 border-beer-gold shadow-lg"></div>
+
+  <!-- Navigation / Header Bar -->
+  <header class="sticky top-0 z-40 bg-chalk-bg/95 backdrop-blur-md border-b border-chalk-border transition-all shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="text-2xl">🥨</span>
+        <div>
+          <span class="font-festive text-xl sm:text-2xl tracking-wide text-beer-gold block leading-tight">Oktoberfest &amp; Baby Shower</span>
+          <span class="text-xs text-chalk-muted tracking-wider">The Lambots • Oct 17 • Paso Robles</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#charities" class="hidden sm:inline-flex text-xs font-semibold text-chalk-muted hover:text-white transition">Charities</a>
+        <a href="#registry" class="hidden sm:inline-flex text-xs font-semibold text-chalk-muted hover:text-white transition">Registry</a>
+        <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 bg-gradient-to-r from-beer-amber to-beer-gold hover:from-amber-600 hover:to-beer-amber text-slate-950 font-bold px-4 py-2 rounded-full text-xs sm:text-sm shadow-md hover:scale-105 transition duration-200">
+          <span>RSVP on Partiful</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 md:py-12 w-full space-y-12">
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-chalk-card rounded-3xl p-6 sm:p-12 text-center chalk-frame overflow-hidden">
+      <!-- Decorative Bavarian corner accents -->
+      <div class="absolute -top-10 -left-10 w-28 h-28 bavarian-banner rotate-45 opacity-40 rounded-xl pointer-events-none border border-beer-gold"></div>
+      <div class="absolute -top-10 -right-10 w-28 h-28 bavarian-banner -rotate-45 opacity-40 rounded-xl pointer-events-none border border-beer-gold"></div>
+
+      <!-- German Welcome Callout -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-chalk-bg/90 border border-beer-gold/40 text-beer-gold text-xs sm:text-sm font-semibold tracking-wide mb-4">
+        <span>🌾</span>
+        <span>The Lambots Proudly Present</span>
+        <span>🌾</span>
+      </div>
+
+      <h1 class="font-bavarian text-5xl sm:text-6xl md:text-7xl text-amber-100 tracking-wider mb-2 drop-shadow-md">
+        Willkommen!
+      </h1>
+
+      <p class="text-xs sm:text-sm tracking-widest text-beer-warm uppercase font-semibold max-w-md mx-auto mb-4">
+        Grab your Dirndls &amp; Lederhosen and Oompah-Pa your way over for an
+      </p>
+
+      <!-- COHESIVE HEADLINE: Oktoberfest (Big, Line 1) + & Baby Shower (Smaller, Line 2) -->
+      <div class="my-6">
+        <div class="font-festive text-5xl sm:text-7xl md:text-8xl tracking-wider text-amber-200 uppercase drop-shadow-lg leading-none">
+          OKTOBERFEST
+        </div>
+        <div class="font-festive text-2xl sm:text-4xl md:text-5xl text-bavarian-sky tracking-wide mt-2 sm:mt-3 drop-shadow">
+          &amp; Baby Shower
+        </div>
+      </div>
+
+      <!-- Subtitle Motto -->
+      <div class="inline-block bg-black/50 border border-beer-gold/30 px-6 py-2.5 rounded-2xl mb-8">
+        <p class="font-festive text-xl sm:text-2xl text-amber-300 tracking-wide">
+          Last Oktoberfest before D-Day 👶🍺
+        </p>
+      </div>
+
+      <!-- Quick Info Bar (Date, Time, Location) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 max-w-2xl mx-auto mb-8 text-left">
+        <!-- Date -->
+        <div class="bg-chalk-bg/85 border border-chalk-border rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
+            📅
+          </div>
+          <div>
+            <div class="text-xs text-chalk-muted uppercase tracking-wider font-semibold">Date</div>
+            <div class="text-base font-bold text-white">October 17</div>
+          </div>
+        </div>
+
+        <!-- Time -->
+        <div class="bg-chalk-bg/85 border border-chalk-border rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
+            ⏰
+          </div>
+          <div>
+            <div class="text-xs text-chalk-muted uppercase tracking-wider font-semibold">Time</div>
+            <div class="text-base font-bold text-white">3:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="bg-chalk-bg/85 border border-chalk-border rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
+            📍
+          </div>
+          <div>
+            <div class="text-xs text-chalk-muted uppercase tracking-wider font-semibold">Location</div>
+            <div class="text-base font-bold text-white truncate">Paso Robles, CA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call To Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-beer-amber via-beer-gold to-amber-500 hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-lg shadow-xl hover:scale-105 transition-transform duration-200 glow-gold">
+          <span>RSVP on Partiful</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <button onclick="openFlyerModal()" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-chalk-text border border-beer-gold/40 px-6 py-4 rounded-2xl font-semibold text-sm transition">
+          <svg class="w-4 h-4 text-beer-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>View Official Invitation Flyer</span>
+        </button>
+      </div>
+
+      <!-- Live Countdown Clock -->
+      <div id="countdown-container" class="mt-8 pt-6 border-t border-beer-gold/20">
+        <div class="text-xs uppercase tracking-widest text-chalk-muted font-medium mb-3">Countdown to Tapping the Keg</div>
+        <div class="flex items-center justify-center gap-3 sm:gap-6 text-center">
+          <div class="bg-black/50 rounded-xl px-4 py-2.5 min-w-[70px] border border-white/10">
+            <span id="days" class="font-festive text-3xl sm:text-4xl text-beer-gold">--</span>
+            <span class="block text-[11px] uppercase tracking-wider text-chalk-muted mt-0.5">Days</span>
+          </div>
+          <span class="text-2xl text-beer-gold font-bold">:</span>
+          <div class="bg-black/50 rounded-xl px-4 py-2.5 min-w-[70px] border border-white/10">
+            <span id="hours" class="font-festive text-3xl sm:text-4xl text-beer-gold">--</span>
+            <span class="block text-[11px] uppercase tracking-wider text-chalk-muted mt-0.5">Hours</span>
+          </div>
+          <span class="text-2xl text-beer-gold font-bold">:</span>
+          <div class="bg-black/50 rounded-xl px-4 py-2.5 min-w-[70px] border border-white/10">
+            <span id="minutes" class="font-festive text-3xl sm:text-4xl text-beer-gold">--</span>
+            <span class="block text-[11px] uppercase tracking-wider text-chalk-muted mt-0.5">Mins</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT DETAILS & LOCATION -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Where & When Card -->
+      <div class="bg-chalk-card rounded-3xl p-6 sm:p-8 chalk-frame flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-2xl">
+              🏡
+            </div>
+            <h3 class="font-festive text-2xl text-white tracking-wide">Location &amp; Times</h3>
+          </div>
+          
+          <div class="space-y-1 mb-6">
+            <p class="text-xl font-bold text-amber-200">The Lambots</p>
+            <p class="text-chalk-text text-base">1010 Vista Grande Street</p>
+            <p class="text-chalk-muted text-sm">Paso Robles, CA 93446</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-chalk-bg/85 border border-chalk-border space-y-2 mb-6">
+            <div class="text-xs font-semibold text-beer-gold uppercase tracking-wider">Party Schedule</div>
+            <div class="flex justify-between items-center text-sm py-1.5 border-b border-white/5">
+              <span class="text-chalk-text">Doors Open &amp; Keg Tapping</span>
+              <span class="font-bold text-white">3:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center text-sm py-1.5">
+              <span class="text-chalk-text">Celebration &amp; Feasting</span>
+              <span class="font-bold text-white">All Afternoon &amp; Evening</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://maps.google.com/?q=1010+Vista+Grande+Street,+Paso+Robles,+CA+93446" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 w-full bg-chalk-bg hover:bg-chalk-cardHover text-bavarian-sky hover:text-white border border-beer-gold/30 hover:border-bavarian-sky px-4 py-3.5 rounded-xl font-semibold text-sm transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Open in Google Maps</span>
+        </a>
+      </div>
+
+      <!-- Attire & The Vibe Card -->
+      <div class="bg-chalk-card rounded-3xl p-6 sm:p-8 chalk-frame flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-2xl">
+              🥨
+            </div>
+            <h3 class="font-festive text-2xl text-white tracking-wide">Attire &amp; Fare</h3>
+          </div>
+
+          <div class="space-y-4 text-sm text-chalk-text/90 leading-relaxed mb-6">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl mt-0.5">👗</span>
+              <div>
+                <strong class="text-white block font-semibold mb-0.5">Dirndls &amp; Lederhosen Encouraged!</strong>
+                Don your finest Bavarian trachten! If you don't own traditional gear, festive casual wear is warmly welcome.
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-2xl mt-0.5">🍺</span>
+              <div>
+                <strong class="text-white block font-semibold mb-0.5">Cold Bier &amp; N/A Brews</strong>
+                Traditional Oktoberfest beers flowing freely, plus a thoughtful spread of non-alcoholic brews and refreshments for expecting mamas &amp; drivers!
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-2xl mt-0.5">🌭</span>
+              <div>
+                <strong class="text-white block font-semibold mb-0.5">Bavarian Bites</strong>
+                Fresh soft pretzels, hearty Bavarian fare, and celebratory sweets.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-chalk-bg/85 p-3.5 rounded-xl border border-chalk-border text-center text-xs text-chalk-muted">
+          Questions or need help? Text Steph at <a href="tel:3473692303" class="text-beer-gold font-bold hover:underline">347-369-2303</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARITIES / IN LIEU OF GIFTS -->
+    <section id="charities" class="bg-chalk-card rounded-3xl p-6 sm:p-10 chalk-frame">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          Give Back
+        </div>
+        <h2 class="font-festive text-3xl sm:text-4xl text-white tracking-wide">Charity Recommendations</h2>
+        <p class="text-sm text-chalk-muted mt-2 leading-relaxed">
+          In lieu of gifts, we would be deeply honored if you considered supporting causes dear to our growing family.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Charity 1: ECHO Homeless Shelter -->
+        <div class="bg-chalk-bg rounded-2xl p-6 border border-chalk-border flex flex-col justify-between hover:border-emerald-500/50 transition duration-200">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl">
+                🏡
+              </div>
+              <span class="text-[11px] font-semibold text-emerald-400/90 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                Paso Robles Local
+              </span>
+            </div>
+            <h3 class="font-festive text-xl text-white mb-1">ECHO Homeless Shelter</h3>
+            <p class="text-xs text-chalk-muted leading-relaxed mb-6">
+              Operating a 90-day shelter right here in Paso Robles, providing meals, case management, and compassionate resources to help local families and individuals secure stable housing.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.echoshelter.org/donate" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-1.5 w-full bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 px-4 py-2.5 rounded-xl font-semibold text-xs transition">
+              <span>Donate to ECHO</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Charity 2: SLO Food Bank -->
+        <div class="bg-chalk-bg rounded-2xl p-6 border border-chalk-border flex flex-col justify-between hover:border-emerald-500/50 transition duration-200">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl">
+                🌾
+              </div>
+              <span class="text-[11px] font-semibold text-emerald-400/90 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                SLO County
+              </span>
+            </div>
+            <h3 class="font-festive text-xl text-white mb-1">SLO Food Bank</h3>
+            <p class="text-xs text-chalk-muted leading-relaxed mb-6">
+              Working tirelessly to relieve hunger across San Luis Obispo County by distributing millions of pounds of fresh, nutritious food directly to local families, children, and seniors in need.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.slofoodbank.org/donate/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-1.5 w-full bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 px-4 py-2.5 rounded-xl font-semibold text-xs transition">
+              <span>Donate to Food Bank</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Charity 3: Jack's Helping Hand -->
+        <div class="bg-chalk-bg rounded-2xl p-6 border border-chalk-border flex flex-col justify-between hover:border-emerald-500/50 transition duration-200">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl">
+                👶
+              </div>
+              <span class="text-[11px] font-semibold text-emerald-400/90 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                Children's Support
+              </span>
+            </div>
+            <h3 class="font-festive text-xl text-white mb-1">Jack's Helping Hand</h3>
+            <p class="text-xs text-chalk-muted leading-relaxed mb-6">
+              Providing direct financial assistance, specialized pediatric equipment, and travel support for local Central Coast infants and children facing severe illnesses, cancer, or special needs.
+            </p>
+          </div>
+          <div>
+            <a href="https://www.jackshelpinghand.org/donate/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-1.5 w-full bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 px-4 py-2.5 rounded-xl font-semibold text-xs transition">
+              <span>Donate to Jack's Hand</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BABY REGISTRY SECTION -->
+    <section id="registry" class="bg-chalk-card rounded-3xl p-6 sm:p-8 chalk-frame text-center">
+      <h2 class="font-festive text-2xl sm:text-3xl text-white tracking-wide mb-2">Baby Registry</h2>
+      <p class="text-sm sm:text-base text-chalk-muted max-w-xl mx-auto leading-relaxed">
+        Our baby registry will be posted here soon.
+      </p>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="bg-chalk-card rounded-3xl p-6 sm:p-10 chalk-frame">
+      <h2 class="font-festive text-3xl text-white text-center mb-8">Fest Details &amp; FAQ</h2>
+      
+      <div class="space-y-4 max-w-2xl mx-auto">
+        
+        <details class="group bg-chalk-bg rounded-2xl border border-chalk-border p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>Are children and families welcome?</span>
+            <span class="text-beer-gold group-open:rotate-180 transition-transform duration-200">▼</span>
+          </summary>
+          <p class="mt-3 text-sm text-chalk-muted leading-relaxed">
+            Yes! Little ones and family members are warmly welcome to join the celebration.
+          </p>
+        </details>
+
+        <details class="group bg-chalk-bg rounded-2xl border border-chalk-border p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>What if I don't own a Dirndl or Lederhosen?</span>
+            <span class="text-beer-gold group-open:rotate-180 transition-transform duration-200">▼</span>
+          </summary>
+          <p class="mt-3 text-sm text-chalk-muted leading-relaxed">
+            No problem at all! While Bavarian trachten is enthusiastically encouraged if you want an excuse to dress up, festive casual party attire is completely fine.
+          </p>
+        </details>
+
+        <details class="group bg-chalk-bg rounded-2xl border border-chalk-border p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>What will the beverage selection look like?</span>
+            <span class="text-beer-gold group-open:rotate-180 transition-transform duration-200">▼</span>
+          </summary>
+          <p class="mt-3 text-sm text-chalk-muted leading-relaxed">
+            We will have authentic German beers on tap and ice, alongside a delicious spread of non-alcoholic craft beers, sparkling ciders, and sodas so expecting mamas and designated drivers can raise a proper glass!
+          </p>
+        </details>
+
+        <details class="group bg-chalk-bg rounded-2xl border border-chalk-border p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-white text-sm sm:text-base">
+            <span>Where should I park?</span>
+            <span class="text-beer-gold group-open:rotate-180 transition-transform duration-200">▼</span>
+          </summary>
+          <p class="mt-3 text-sm text-chalk-muted leading-relaxed">
+            Street parking is available along Vista Grande Street and neighboring residential roads. Please be courteous to neighbors' driveways! Ridesharing is also great.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- BIG BOTTOM RSVP CALLOUT -->
+    <section class="bg-gradient-to-br from-amber-500/20 via-chalk-card to-bavarian-blue/20 rounded-3xl p-8 sm:p-12 text-center chalk-frame relative overflow-hidden">
+      <div class="max-w-xl mx-auto space-y-4 relative z-10">
+        <h3 class="font-bavarian text-5xl sm:text-6xl text-beer-gold">Prost!</h3>
+        <p class="text-lg sm:text-xl text-chalk-text">
+          We cannot wait to raise a stein (or a baby bottle) with you!
+        </p>
+        <div class="pt-3">
+          <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-beer-amber to-beer-gold hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-lg shadow-xl hover:scale-105 transition-transform duration-200">
+            <span>RSVP on Partiful</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+        <p class="text-xs sm:text-sm text-chalk-muted pt-2">
+          Questions or RSVP by phone/text: <a href="tel:3473692303" class="text-white hover:underline font-bold">347-369-2303</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLYER LIGHTBOX MODAL -->
+  <div id="flyerModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="relative max-w-xl w-full bg-chalk-card rounded-3xl overflow-hidden shadow-2xl border border-beer-gold/50">
+      <div class="flex items-center justify-between p-4 border-b border-chalk-border bg-chalk-bg">
+        <span class="font-festive text-base text-white tracking-wide">Official Invitation Flyer</span>
+        <button onclick="closeFlyerModal()" class="text-chalk-muted hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="p-3 sm:p-5 max-h-[75vh] overflow-y-auto flex items-center justify-center bg-black/50">
+        <img src="assets/invite.jpg" alt="Oktoberfest & Baby Shower Invitation Flyer" class="max-h-[70vh] w-auto rounded-xl shadow-2xl" />
+      </div>
+      <div class="p-4 border-t border-chalk-border bg-chalk-bg flex items-center justify-between">
+        <a href="assets/invite.jpg" download="Oktoberfest-Baby-Shower-Invitation.jpg" 
+           class="text-xs font-semibold text-beer-gold hover:underline flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Save Image to Photos
+        </a>
+        <button onclick="closeFlyerModal()" class="bg-white/10 hover:bg-white/20 text-white text-xs font-semibold px-4 py-2 rounded-xl transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bavarian Diamond Flag Banner (Substantial & Bold) -->
+  <div class="w-full h-14 sm:h-20 bavarian-banner border-t-4 border-beer-gold shadow-inner mt-12"></div>
+
+  <!-- Footer -->
+  <footer class="bg-chalk-bg py-6 text-center text-xs text-chalk-muted border-t border-chalk-border">
+    <p>Oktoberfest &amp; Baby Shower • The Lambots • Paso Robles, CA</p>
+    <p class="mt-1 text-[11px] opacity-75">Designed for family &amp; friends with love • Prost!</p>
+  </footer>
+
+  <!-- Countdown & Modal Script -->
+  <script>
+    // Countdown to October 17, 3:00 PM Pacific Time
+    function updateCountdown() {
+      const currentYear = new Date().getFullYear();
+      let targetDate = new Date(`October 17, ${currentYear} 15:00:00 GMT-0700`).getTime();
+      const now = new Date().getTime();
+      
+      if (now > targetDate) {
+        targetDate = new Date(`October 17, ${currentYear + 1} 15:00:00 GMT-0700`).getTime();
+      }
+
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown-container").innerHTML = "<div class='text-beer-gold font-festive text-xl'>The Fest is happening today! Prost! 🍻</div>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+
+      if (daysEl) daysEl.innerText = days;
+      if (hoursEl) hoursEl.innerText = hours;
+      if (minutesEl) minutesEl.innerText = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // Modal controls
+    function openFlyerModal() {
+      const modal = document.getElementById('flyerModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeFlyerModal() {
+      const modal = document.getElementById('flyerModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Close modal on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeFlyerModal();
+    });
+  </script>
+</body>
+</html>
