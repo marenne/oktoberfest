@@ -199,29 +199,33 @@
         </div>
       </div>
 
-      <!-- Call To Action Buttons (Partiful or Text) -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+      <!-- RSVP Prompt Text (Above Buttons) -->
+      <p class="text-xs sm:text-sm text-amber-200 font-semibold mb-4 tracking-wide">
+        Two easy ways to RSVP: via Partiful or directly by text to Steph!
+      </p>
+
+      <!-- Primary RSVP Buttons (Partiful or Text) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4">
         <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-beer-amber via-beer-gold to-amber-500 hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg shadow-xl hover:scale-105 transition-transform duration-200 glow-gold">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-beer-amber via-beer-gold to-amber-500 hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-7 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg shadow-xl hover:scale-105 transition-transform duration-200 glow-gold">
           <span>RSVP on Partiful</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
 
         <a href="sms:3473692303" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-white border border-beer-gold/60 hover:border-beer-gold px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl font-bold text-base sm:text-lg shadow-lg transition">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-white border border-beer-gold/60 hover:border-beer-gold px-7 py-3.5 sm:py-4 rounded-2xl font-bold text-base sm:text-lg shadow-lg transition">
           <span>💬 Text Steph: 347-369-2303</span>
         </a>
-
-        <button onclick="openFlyerModal()" 
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-black/60 text-chalk-muted hover:text-white border border-white/10 px-5 py-3.5 sm:py-4 rounded-2xl font-semibold text-xs sm:text-sm transition">
-          <svg class="w-4 h-4 text-beer-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <span>View Flyer</span>
-        </button>
       </div>
 
-      <p class="text-xs sm:text-sm text-chalk-muted mt-3">
-        Two easy ways to RSVP: via Partiful or directly by text to Steph!
-      </p>
+      <!-- Flyer Button (Centered & Below RSVP Options) -->
+      <div class="flex justify-center">
+        <button onclick="openFlyerModal()" 
+                class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-black/60 text-chalk-muted hover:text-white border border-white/10 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition">
+          <svg class="w-4 h-4 text-beer-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>View Official Invitation Flyer</span>
+        </button>
+      </div>
 
       <!-- Live Countdown Clock -->
       <div id="countdown-container" class="mt-8 pt-6 border-t border-beer-gold/20">
@@ -270,9 +274,12 @@
               <span class="text-chalk-text">Doors Open &amp; Keg Tapping</span>
               <span class="font-bold text-white">3:00 PM</span>
             </div>
-            <div class="flex justify-between items-center text-sm py-1.5">
+            <div class="flex justify-between items-center text-sm py-1.5 border-b border-white/5">
               <span class="text-chalk-text">Celebration &amp; Feasting</span>
               <span class="font-bold text-white">All Afternoon &amp; Evening</span>
+            </div>
+            <div class="pt-1 text-center sm:text-left">
+              <p class="text-xs text-chalk-muted italic">Probably until 9pm, this is California after all.</p>
             </div>
           </div>
         </div>
@@ -322,8 +329,8 @@
         </div>
 
         <div class="bg-chalk-bg/90 p-4 rounded-2xl border border-beer-gold/30 text-center text-sm">
-          <span class="text-chalk-muted block sm:inline">RSVP or questions by text:</span>
-          <a href="sms:3473692303" class="text-beer-gold font-bold hover:underline sm:ml-1.5 block sm:inline mt-1 sm:mt-0 text-base">
+          <div class="text-chalk-muted mb-1.5">RSVP or questions by text:</div>
+          <a href="sms:3473692303" class="text-beer-gold font-bold hover:underline text-base inline-block">
             💬 Text Steph at 347-369-2303
           </a>
         </div>
