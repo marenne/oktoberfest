@@ -199,20 +199,29 @@
         </div>
       </div>
 
-      <!-- Call To Action Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- Call To Action Buttons (Partiful or Text) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
         <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-beer-amber via-beer-gold to-amber-500 hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-lg shadow-xl hover:scale-105 transition-transform duration-200 glow-gold">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-beer-amber via-beer-gold to-amber-500 hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg shadow-xl hover:scale-105 transition-transform duration-200 glow-gold">
           <span>RSVP on Partiful</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
 
+        <a href="sms:3473692303" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-white border border-beer-gold/60 hover:border-beer-gold px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl font-bold text-base sm:text-lg shadow-lg transition">
+          <span>💬 Text Steph: 347-369-2303</span>
+        </a>
+
         <button onclick="openFlyerModal()" 
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-chalk-text border border-beer-gold/40 px-6 py-4 rounded-2xl font-semibold text-sm transition">
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-black/60 text-chalk-muted hover:text-white border border-white/10 px-5 py-3.5 sm:py-4 rounded-2xl font-semibold text-xs sm:text-sm transition">
           <svg class="w-4 h-4 text-beer-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <span>View Official Invitation Flyer</span>
+          <span>View Flyer</span>
         </button>
       </div>
+
+      <p class="text-xs sm:text-sm text-chalk-muted mt-3">
+        Two easy ways to RSVP: via Partiful or directly by text to Steph!
+      </p>
 
       <!-- Live Countdown Clock -->
       <div id="countdown-container" class="mt-8 pt-6 border-t border-beer-gold/20">
@@ -312,8 +321,11 @@
           </div>
         </div>
 
-        <div class="bg-chalk-bg/85 p-3.5 rounded-xl border border-chalk-border text-center text-xs text-chalk-muted">
-          Questions or need help? Text Steph at <a href="tel:3473692303" class="text-beer-gold font-bold hover:underline">347-369-2303</a>
+        <div class="bg-chalk-bg/90 p-4 rounded-2xl border border-beer-gold/30 text-center text-sm">
+          <span class="text-chalk-muted block sm:inline">RSVP or questions by text:</span>
+          <a href="sms:3473692303" class="text-beer-gold font-bold hover:underline sm:ml-1.5 block sm:inline mt-1 sm:mt-0 text-base">
+            💬 Text Steph at 347-369-2303
+          </a>
         </div>
       </div>
     </section>
@@ -474,15 +486,20 @@
         <p class="text-lg sm:text-xl text-chalk-text">
           We cannot wait to raise a stein (or a baby bottle) with you!
         </p>
-        <div class="pt-3">
+        <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a href="https://partiful.com/e/RFFBUSc0SVnnD6CM5QG0" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-beer-amber to-beer-gold hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-lg shadow-xl hover:scale-105 transition-transform duration-200">
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-beer-amber to-beer-gold hover:from-amber-600 hover:to-beer-amber text-slate-950 font-extrabold px-7 py-4 rounded-2xl text-base sm:text-lg shadow-xl hover:scale-105 transition-transform duration-200">
             <span>RSVP on Partiful</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
+          
+          <a href="sms:3473692303"
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-chalk-bg hover:bg-chalk-cardHover text-white border border-beer-gold/60 hover:border-beer-gold px-7 py-4 rounded-2xl text-base sm:text-lg font-bold shadow-lg transition">
+            <span>💬 Text Steph: 347-369-2303</span>
+          </a>
         </div>
         <p class="text-xs sm:text-sm text-chalk-muted pt-2">
-          Questions or RSVP by phone/text: <a href="tel:3473692303" class="text-white hover:underline font-bold">347-369-2303</a>
+          Feel free to RSVP either through Partiful or by texting Steph directly!
         </p>
       </div>
     </section>
